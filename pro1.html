@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="myModule">
+<head>
+</head>
+<body>
+  <div ng-controller="myController">
+      <table style="background-color:yellow";>
+	      <thead>
+		    <tr>
+		      <th style="padding-right:0px;">first name</th>
+		      <th>last name</th>	
+		      <th>gender</th>
+		      <th>salary</th>			 
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr ng-repeat="employee in employees">
+		      <td>{{employee.firstName}}</td>
+              <td>{{employee.lastName}}</td>
+			  <td>{{employee.gender}}</td>
+              <td>{{employee.salary}}</td>
+		    </tr>
+		  </tbody>
+	  </table><hr>
+  
+	  <div style="background-color:gray";>
+	  	<li ng-repeat="country in countries">
+		   {{country.name}} ..... index: {{$index}}
+		   <ul>
+		     <li ng-repeat="city in country.cities">
+		       {{city.name}} ->  index: {{$index}}
+			 </li>
+		   </ul>
+		</li>
+	  </div>
+	  
+  </div>
+
+  
+<script src="js/angular.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
